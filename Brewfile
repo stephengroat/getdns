@@ -1,0 +1,2 @@
+brew 'gawk'
+brew 'openssl'

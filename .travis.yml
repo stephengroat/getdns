@@ -3,6 +3,10 @@ language: c
 compiler:
   - gcc
   - clang
+os:
+  - linux
+  - osx
+env: LDFLAGS="-L/usr/local/opt/openssl/lib" CPPFLAGS="-I/usr/local/opt/openssl/include"
 addons:
   apt:
     packages:
@@ -17,6 +21,8 @@ addons:
     - clang
     - wget
     - openssh-client
+  homebrew:
+    brewfile: true
 script:
   - mkdir tests
   - cd tests
